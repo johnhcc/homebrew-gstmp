@@ -39,7 +39,8 @@ class GhostscriptX11 < Formula
   depends_on "libxt"
   depends_on "little-cms2"
   depends_on "openjpeg"
-  depends_on "openlibm"
+  depends_on "glib"
+  depends_on "glibc"
   depends_on "tesseract"
 
   uses_from_macos "expat"
