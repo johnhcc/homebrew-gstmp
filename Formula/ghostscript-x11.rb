@@ -28,7 +28,7 @@ class GhostscriptX11 < Formula
   depends_on "pkgconf" => :build
   depends_on "fontconfig"
   depends_on "freetype"
-  depends_on "glibc"
+  depends_on "glibc" unless OS.mac?
   depends_on "jbig2dec"
   depends_on "jpeg-turbo"
   depends_on "leptonica"
