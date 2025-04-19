@@ -39,7 +39,7 @@ class GhostscriptX11 < Formula
   depends_on "libxt"
   depends_on "little-cms2"
   depends_on "openjpeg"
-  depends_on "openlibm"
+  # depends_on "openlibm"
   depends_on "tesseract"
 
   uses_from_macos "expat"
@@ -72,7 +72,8 @@ class GhostscriptX11 < Formula
     system configure, *args, *std_configure_args
 
     # Install binaries and libraries
-    system "make", "install"
+    # system "make", "install"
+    system "make", "install", "LDFLAGS=\"-lm\""
     ENV.deparallelize { system "make", "install-so" } unless OS.mac?
 
     (pkgshare/"fonts").install resource("fonts")
