@@ -33,7 +33,7 @@ class GhostscriptX11 < Formula
   depends_on "leptonica"
   depends_on "libarchive"
   depends_on "libidn"
-  depends_on "libmc"
+  depends_on "libmpc"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libx11"
