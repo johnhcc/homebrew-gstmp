@@ -28,6 +28,7 @@ class GhostscriptX11 < Formula
   depends_on "pkgconf" => :build
   depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "glibc"
   depends_on "jbig2dec"
   depends_on "jpeg-turbo"
   depends_on "leptonica"
@@ -39,8 +40,6 @@ class GhostscriptX11 < Formula
   depends_on "libxt"
   depends_on "little-cms2"
   depends_on "openjpeg"
-  depends_on "glib"
-  # depends_on "glibc"
   depends_on "tesseract"
 
   uses_from_macos "expat"
@@ -73,8 +72,8 @@ class GhostscriptX11 < Formula
     system configure, *args, *std_configure_args
 
     # Install binaries and libraries
-    system "make", "install", "LDFLAGS=\"-lm\""
-    ENV.deparallelize { system "make", "install-so", "LDFLAGS=\"-lm\"" } unless OS.mac?
+    system "make", "install"
+    ENV.deparallelize { system "make", "install-so" } unless OS.mac?
 
     (pkgshare/"fonts").install resource("fonts")
 
