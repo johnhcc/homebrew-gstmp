@@ -6,7 +6,7 @@ class Gv < Formula
   sha256 "2162b3b3a95481d3855b3c4e28f974617eef67824523e56e20b56f12fe201a61"
 
   depends_on "pkg-config" => :build
-  depends_on "johnhcc/gs-x11/ghostscript-x11"
+#   depends_on "johnhcc/gs-x11/ghostscript-x11"
   depends_on "libx11"
   depends_on "libxaw3d"
 
